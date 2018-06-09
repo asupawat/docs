@@ -106,6 +106,9 @@ Creating a MongoDB Database
 > use explorerdb
 > db.createUser( { user: "3er44we222", pwd: "3eu4ue8hhk988!kd8", roles: [ "readWrite" ] } )
 > exit
+# if need to delete database
+> use explorerdb
+> db.dropDatabase();
 
 Installing the Explorer
 # cd /home/
