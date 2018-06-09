@@ -109,7 +109,7 @@ Creating a MongoDB Database
 
 Installing the Explorer
 # cd /home/
-# git clone https://github.com/asupawat/explorer.git sam-explorer
+# git clone https://github.com/asupawat/stampcoin-explorer.git sam-explorer
 # cd explorer
 # npm install --production
 # cp ./settings.json.template ./settings.json
@@ -141,7 +141,7 @@ Editing Cron
 # sudo crontab -e
 
 Add Cron to File to update the explorer
-*/1 * * * * cd /path/to/explorer && /usr/bin/node scripts/sync.js index update > /dev/null 2>&1
+*/1 * * * * cd /home/sam-explorer && /usr/bin/node scripts/sync.js index update > /dev/null 2>&1
 */1 * * * * cd /home/sam-explorer && /usr/bin/node scripts/peers.js index update > /dev/null 2>&1
 
 Add Cron to make sure the Pulsed runs (NOT WORKING)
