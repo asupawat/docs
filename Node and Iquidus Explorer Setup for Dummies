@@ -44,37 +44,30 @@ Add to fstab file
 /swapfile   none    swap    sw    0   0
 
 Adding the Coin
-# sudo git clone https://github.com/elcrypto/Pulse.git
-
-Change Directories to src/
-# cd Pulse/src/ 
-
-Compile the code with flags
-# sudo make -f makefile.unix USE_UPNP=1
-# sudo strip pulsed
+[example Stampcoin]
+copy stampcoind and stampcoin-cli to /usr/local/bin
 
 Stat the file with daemon flag so that you can create a config file
-# sudo ./pulsed -daemon
+# sudo stampcoind -daemon
 
-Create a conf file in .pulse/pulse.conf
+Create a conf file in .stampcoin/stampcoin.conf
 # cd
-# sudo nano .pulse/pulse.conf
+# sudo nano .stampcoin/stampcoin.conf
 
 rpcuser=pulserpc
 rpcpassword=Gnfh67gdmRTGvA5YB3UZhV6e6cPTTeneTTdnosLLD3cU
 listen=1
+daemon=1
+txindex=1
 maxconnections=500
 
-*make sure to set the file to read only.
-# sudo chmod 400 .pulse/pulse.conf
-# cd Pulse/src
-# sudo ./pulsed -daemon -txindex
+# sudo stampcoind
 
 Check it daemon has started.  If it returns information, the daemon is working!
-# sudo ./pulsed getinfo
+# stampcoin-cli getinfo
 
 Stopping the daemon
-# sudo ./pulsed stop
+# stampcoin-cli stop
 
 ******************************************
 *** Setting up the Explorer
@@ -116,8 +109,9 @@ Creating a MongoDB Database
 
 Installing the Explorer
 # cd /home/
-# git clone https://github.com/iquidus/explorer explorer
-# cd explorer && npm install --production
+# git clone https://github.com/asupawat/explorer.git sam-explorer
+# cd explorer
+# npm install --production
 # cp ./settings.json.template ./settings.json
 
 Modify the Settings File
