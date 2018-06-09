@@ -142,7 +142,9 @@ Editing Cron
 
 Add Cron to File to update the explorer
 */1 * * * * cd /home/sam-explorer && /usr/bin/node scripts/sync.js index update > /dev/null 2>&1
-*/1 * * * * cd /home/sam-explorer && /usr/bin/node scripts/peers.js index update > /dev/null 2>&1
+*/2 * * * * cd /home/sam-explorer && /usr/bin/node scripts/sync.js market > /dev/null 2>&1
+*/5 * * * * cd /home/sam-explorer && /usr/bin/node scripts/peers.js > /dev/null 2>&1
+*/5 * * * * cd /home/sam-explorer && /usr/bin/node scripts/masternodes.js > /dev/null 2>&1
 
 Add Cron to make sure the Pulsed runs (NOT WORKING)
 If anyone has a good reboot for this, please post in the comments.
