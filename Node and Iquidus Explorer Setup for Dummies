@@ -103,11 +103,12 @@ Installing Nodejs
 
 Creating a MongoDB Database
 # sudo mongo
-> use explorerdb
+> use samexplorerdb
 > db.createUser( { user: "3er44we222", pwd: "3eu4ue8hhk988!kd8", roles: [ "readWrite" ] } )
 > exit
-# if need to delete database
-> use explorerdb
+
+# **** if need to delete database
+> use samexplorerdb
 > db.dropDatabase();
 
 Installing the Explorer
@@ -132,6 +133,9 @@ Install Forever to keep the js running
 
 Start the Explorer
 # forever start bin/cluster
+
+If need to stop the Explorer
+# forever stop bin/cluster
 
 ******************************************
 *** Installing Cron
