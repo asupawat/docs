@@ -54,12 +54,15 @@ Create a conf file in .stampcoin/stampcoin.conf
 # cd
 # sudo nano .stampcoin/stampcoin.conf
 
-rpcuser=pulserpc
+rpcuser=stampcoinrpc
 rpcpassword=Gnfh67gdmRTGvA5YB3UZhV6e6cPTTeneTTdnosLLD3cU
+rpcport=43453
+port=43452
+rpcallowip=127.0.0.1
 listen=1
 daemon=1
+server=1
 txindex=1
-maxconnections=500
 
 # sudo stampcoind
 
